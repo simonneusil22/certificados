@@ -1,1 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Validación de Certificado</title>
+</head>
+<body>
+  <h1>Validación de Certificado</h1>
+  <p id="resultado"></p>
+
+  <script>
+    // Obtiene el hash desde la URL
+    const hash = window.location.pathname.split("/").pop();
+    document.getElementById("resultado").textContent =
+      "Certificado válido con código: " + hash;
+  </script>
+</body>
+</html>
 
