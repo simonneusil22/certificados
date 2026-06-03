@@ -30,15 +30,12 @@
   <p id="resultado">Verificando...</p>
 
   <script>
-    // Obtener el parámetro "hash" de la URL
     const params = new URLSearchParams(window.location.search);
     const hash = params.get("hash");
 
     if (!hash) {
-      document.getElementById("resultado").textContent =
-        "⚠️ No se proporcionó un código de validación.";
+      document.getElementById("resultado").textContent = "⚠️ No se proporcionó un código de validación.";
     } else {
-      // Consultar el archivo validos.json en GitHub Pages
       fetch("https://simonneusil22.github.io/certificados/validos.json")
         .then(res => res.json())
         .then(data => {
@@ -46,14 +43,12 @@
             document.getElementById("resultado").textContent = "✅ Certificado válido";
             document.getElementById("resultado").className = "valido";
           } else {
-            document.getElementById("resultado").textContent =
-              "⚠️ Certificado inválido. Llame al cabildo para mayor información.";
+            document.getElementById("resultado").textContent = "⚠️ Certificado inválido. Llame al cabildo para mayor información.";
             document.getElementById("resultado").className = "invalido";
           }
         })
         .catch(err => {
-          document.getElementById("resultado").textContent =
-            "Error al verificar el certificado.";
+          document.getElementById("resultado").textContent = "Error al verificar el certificado.";
           console.error(err);
         });
     }
