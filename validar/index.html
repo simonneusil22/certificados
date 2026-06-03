@@ -36,7 +36,9 @@
     if (!hash) {
       document.getElementById("resultado").textContent = "⚠️ No se proporcionó un código de validación.";
     } else {
-      fetch("https://simonneusil22.github.io/certificados/validos.json")
+      // Agregar timestamp para evitar caché
+      const timestamp = new Date().getTime();
+      fetch(`https://simonneusil22.github.io/certificados/validos.json?t=${timestamp}`)
         .then(res => res.json())
         .then(data => {
           // Buscar el hash en el array de objetos
