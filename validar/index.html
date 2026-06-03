@@ -39,7 +39,10 @@
       fetch("https://simonneusil22.github.io/certificados/validos.json")
         .then(res => res.json())
         .then(data => {
-          if (data.hashes_validos.includes(hash)) {
+          // Buscar el hash en el array de objetos
+          const existe = data.hashes_validos.some(item => item.hash === hash);
+          
+          if (existe) {
             document.getElementById("resultado").textContent = "✅ Certificado válido";
             document.getElementById("resultado").className = "valido";
           } else {
