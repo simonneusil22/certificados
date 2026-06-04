@@ -38,13 +38,10 @@
     } else {
       // Agregar timestamp para evitar caché
       const timestamp = new Date().getTime();
-      fetch(`https://simonneusil22.github.io/certificados/validos.json?t=${timestamp}`)
+      fetch(`${window.location.origin}/certificados/validar/${hash}`)
         .then(res => res.json())
         .then(data => {
-          // Buscar el hash en el array de objetos
-          const existe = data.hashes_validos.some(item => item.hash === hash);
-          
-          if (existe) {
+          if (data.valido) {
             document.getElementById("resultado").textContent = "✅ Certificado válido";
             document.getElementById("resultado").className = "valido";
           } else {
