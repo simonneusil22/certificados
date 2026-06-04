@@ -40,12 +40,23 @@
       fetch("https://raw.githubusercontent.com/simonneusil22/certificados/main/validos.json?t=" + Date.now())
         .then(res => res.json())
         .then(data => {
-          const existe = data.hashes_validos.some(item => item.hash === hash);
-          if (existe) {
+          const item = data.hashes_validos.find(h => h.hash === hash);
+          
+          if (!item) {
+            document.getElementById("resultado").textContent = "⚠️ Certificado inválido. Llame al cabildo para mayor información.";
+            document.getElementById("resultado").className = "invalido";
+            return;
+          }
+
+          // Verificar si tiene menos de 2 días
+          const DOS_DIAS_MS = 2 * 24 * 60 * 60 * 1000;
+          const edad = Date.now() - item.timestamp;
+
+          if (edad < DOS_DIAS_MS) {
             document.getElementById("resultado").textContent = "✅ Certificado válido";
             document.getElementById("resultado").className = "valido";
           } else {
-            document.getElementById("resultado").textContent = "⚠️ Certificado inválido. Llame al cabildo para mayor información.";
+            document.getElementById("resultado").textContent = "⚠️ Certificado expirado (válido solo 2 días)";
             document.getElementById("resultado").className = "invalido";
           }
         })
