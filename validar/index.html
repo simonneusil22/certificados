@@ -36,12 +36,12 @@
     if (!hash) {
       document.getElementById("resultado").textContent = "⚠️ No se proporcionó un código de validación.";
     } else {
-      // Agregar timestamp para evitar caché
-      const timestamp = new Date().getTime();
-      fetch(`${window.location.origin}/certificados/validar/${hash}`)
+      // Leer validos.json directamente desde el repo
+      fetch("https://raw.githubusercontent.com/simonneusil22/certificados/main/validos.json?t=" + Date.now())
         .then(res => res.json())
         .then(data => {
-          if (data.valido) {
+          const existe = data.hashes_validos.some(item => item.hash === hash);
+          if (existe) {
             document.getElementById("resultado").textContent = "✅ Certificado válido";
             document.getElementById("resultado").className = "valido";
           } else {
