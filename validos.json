@@ -1,16 +1,6 @@
 {
   "hashes_validos": [
-    {
-      "hash": "6f4d6de1a3f4c335859b185d8f0ad966a9c833f7087654c90478e6361ce26e7b",
-      "timestamp": 1780962200724
-    },
-    {
-      "hash": "48a27719be05d5b5e0949672cf1983f69cd34b095870d15d33be272140cc6756",
-      "timestamp": 1781061084874
-    },
-    {
-      "hash": "a4de983f68f09feaa4d331ea34436061ef81ba07fbf71b31600968a0d653ef90",
-      "timestamp": 1781064798997
-    }
+    "a4de983f68f09feaa4d331ea34436061ef81ba07fbf71b31600968a0d653ef90",
+    "55f92f8ff0306a27bdc8b56c34c087aeaa962bfa9c9539fe21949e78472fef9a"
   ]
 }
