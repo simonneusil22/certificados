@@ -2,9 +2,6 @@
   "hashes_validos": [
     "a4de983f68f09feaa4d331ea34436061ef81ba07fbf71b31600968a0d653ef90",
     "55f92f8ff0306a27bdc8b56c34c087aeaa962bfa9c9539fe21949e78472fef9a",
-    {
-      "hash": "feffb7e07781bdeb5ef6b455f8192f24ba5c9d0678935b46c2c91f2ed5ac0ab6",
-      "timestamp": 1781465095881
-    }
-  ]
+    "feffb7e07781bdeb5ef6b455f8192f24ba5c9d0678935b46c2c91f2ed5ac0ab6",
+   ]
 }
