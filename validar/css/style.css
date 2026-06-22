@@ -1,0 +1,88 @@
+:root {
+  --color-ocre: #9D8B3D;
+  --color-texto-principal: #4A4A4A;
+  --color-texto-secundario: #6B6B6B;
+  --color-fondo: #F5F1E8;
+}
+
+body {
+  font-family: "Helvetica", Arial, sans-serif;
+  background-color: var(--color-fondo);
+  margin: 0;
+  padding: 0;
+  color: var(--color-texto-principal);
+}
+
+header {
+  background-color: var(--color-ocre);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 1rem;
+  color: var(--color-ocre);
+}
+
+form {
+  max-width: 400px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input, button {
+  padding: 0.8rem;
+  border: 1px solid var(--color-ocre);
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+button {
+  background-color: var(--color-ocre);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #7a6b2f;
+}
+
+footer {
+  background-color: var(--color-texto-secundario);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  form {
+    width: 90%;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+#accionesBtn {
+  display: block;
+  margin: 2rem auto;   /* margen arriba/abajo y centrado horizontal */
+  padding: 0.8rem 1.5rem;
+  background-color: var(--color-ocre);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#accionesBtn:hover {
+  background-color: #7a6b2f;
+}
