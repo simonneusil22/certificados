@@ -86,3 +86,17 @@ footer {
 #accionesBtn:hover {
   background-color: #7a6b2f;
 }
+#accionesMenu button {
+  margin: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--color-ocre);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#accionesMenu button:hover {
+  background-color: #7a6b2f;
+}
